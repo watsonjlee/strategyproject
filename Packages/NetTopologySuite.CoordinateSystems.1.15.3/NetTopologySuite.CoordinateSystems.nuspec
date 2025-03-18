@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>NetTopologySuite.CoordinateSystems</id>
+    <version>1.15.3</version>
+    <title>NTS - Topology Suite</title>
+    <authors>NetTopologySuite - Team</authors>
+    <owners>NetTopologySuite - Team</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">LGPL-2.1-or-later</license>
+    <licenseUrl>https://licenses.nuget.org/LGPL-2.1-or-later</licenseUrl>
+    <projectUrl>https://github.com/NetTopologySuite/NetTopologySuite</projectUrl>
+    <description>The NTS Topology Suite is an API for modelling and manipulating 2-dimensional linear geometry. It provides numerous geometric predicates and functions. NTS conforms to the Simple Features Specification.
+      This package references GeoAPI.</description>
+    <summary>NTS Topology Suite is a direct-port of all the functionalities offered by JTS Topology Suite</summary>
+    <copyright>Copyright 2007-2018</copyright>
+    <language>en-US</language>
+    <tags>NTS Topology OGC SFS</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework3.5-Client">
+        <dependency id="GeoAPI.CoordinateSystems" version="[1.7.5, 2.0.0-A)" />
+      </group>
+      <group targetFramework=".NETFramework4.0-Client">
+        <dependency id="GeoAPI.CoordinateSystems" version="[1.7.5, 2.0.0-A)" />
+      </group>
+      <group targetFramework=".NETFramework4.0.3-Client">
+        <dependency id="GeoAPI.CoordinateSystems" version="[1.7.5, 2.0.0-A)" />
+      </group>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="GeoAPI.CoordinateSystems" version="[1.7.5, 2.0.0-A)" />
+      </group>
+      <group targetFramework=".NETStandard1.0">
+        <dependency id="GeoAPI.CoordinateSystems" version="[1.7.5, 2.0.0-A)" />
+        <dependency id="System.Diagnostics.Debug" version="4.3.0" />
+        <dependency id="System.Linq" version="4.3.0" />
+        <dependency id="System.Text.RegularExpressions" version="4.3.0" />
+        <dependency id="System.Xml.ReaderWriter" version="4.3.0" />
+        <dependency id="System.Xml.XDocument" version="4.3.0" />
+      </group>
+      <group targetFramework=".NETStandard1.3">
+        <dependency id="GeoAPI.CoordinateSystems" version="[1.7.5, 2.0.0-A)" />
+        <dependency id="System.Diagnostics.Debug" version="4.3.0" />
+        <dependency id="System.IO.FileSystem" version="4.3.0" />
+        <dependency id="System.Linq" version="4.3.0" />
+        <dependency id="System.Text.RegularExpressions" version="4.3.0" />
+        <dependency id="System.Xml.ReaderWriter" version="4.3.0" />
+        <dependency id="System.Xml.XDocument" version="4.3.0" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="GeoAPI.CoordinateSystems" version="[1.7.5, 2.0.0-A)" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework="net35-client0.0" />
+      <frameworkAssembly assemblyName="System.Xml" targetFramework="net35-client0.0" />
+      <frameworkAssembly assemblyName="System.Core" targetFramework="net35-client0.0" />
+      <frameworkAssembly assemblyName="System.Xml.Linq" targetFramework="net35-client0.0" />
+    </frameworkAssemblies>
+  </metadata>
+</package>
