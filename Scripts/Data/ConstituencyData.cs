@@ -2,13 +2,15 @@ using UnityEngine;
 
 public class ConstituencyData : MonoBehaviour
 {
-    public string ConstituencyCode; // e.g., "E14000530"
+    public string ConstituencyCode;
     public string ConstituencyName;
-    public string RegionCode;
-    public string RegionName;
-    public int ElectionResult2019; // Example: Store an integer result.
-    // Add other data fields as needed (e.g., floats for percentages, strings for party names).
+    // Election Results Data (Example - adjust based on your CSV)
+    public string ElectedParty2019; // Party that won in 2019
+    public float VoteShareElectedParty2019; // Vote share of the elected party
+    // You can add more fields here for other parties, vote counts, etc., as needed from your CSV
 
-    // You could add methods here to handle data-specific logic,
-    // such as calculating percentage changes, determining the winning party, etc.
+    // Optional. Add these *IF* you load them from somewhere else.
+    // public string RegionCode;
+    // public string RegionName;
+    // public int ElectionResult2019; // Consider if this is still needed, might be redundant now.
 }

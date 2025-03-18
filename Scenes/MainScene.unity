@@ -180,8 +180,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 12
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -205,13 +205,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,7 +426,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1815597900
+--- !u!1 &836947876
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -434,46 +434,133 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1815597902}
-  - component: {fileID: 1815597901}
+  - component: {fileID: 836947877}
   m_Layer: 0
-  m_Name: MapGenerator
+  m_Name: Map Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1815597901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815597900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62c4d972c2e0bb342a128e3b4f68ec83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hexPrefab: {fileID: 5648224773743459283, guid: e5bc3b96a9e7ea44592011bf70ed49c8, type: 3}
-  csvFilePath: Data/constituencies.csv
-  scaleFactor: 0.0001
-  hexRadius: 0.5
---- !u!4 &1815597902
+--- !u!4 &836947877
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815597900}
+  m_GameObject: {fileID: 836947876}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -122.94609, y: -5755.78, z: 3289.2925}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1265572567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1265572569}
+  - component: {fileID: 1265572568}
+  - component: {fileID: 1265572570}
+  - component: {fileID: 1265572571}
+  m_Layer: 0
+  m_Name: Map
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1265572568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265572567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24e5865af374eee4aacb8e06daa766f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  geoJsonFilePath: Assets/UK_Constituencies.geojson
+  extrusionHeight: 0.1
+  extrusionSeparation: 0.001
+  defaultMaterial: {fileID: 2100000, guid: a83a76b80b499a045ae7d845fcff04d6, type: 2}
+  highlightMaterial: {fileID: 2100000, guid: a83a76b80b499a045ae7d845fcff04d6, type: 2}
+  lineMaterial: {fileID: 2100000, guid: 288d259bb5081e745a7e58f53973cadf, type: 2}
+  lineWidth: 0.1
+  mapContainer: {fileID: 836947877}
+  mapScale: 0.00001
+  centerMap: 1
+  loadOnStart: 1
+  useStreamingAssets: 0
+  dataImporter: {fileID: 1265572571}
+--- !u!4 &1265572569
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265572567}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -122.94609, y: -5755.78, z: 3289.2925}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1265572570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265572567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91a2cee404401aa4fb18b20a3207acdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConstituencyCode: 
+  ConstituencyName: 
+  ElectedParty2019: 
+  VoteShareElectedParty2019: 0
+--- !u!114 &1265572571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265572567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6807b78756dc1449a0b2383052adcd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electionResultsCSVFile: electionresults.csv
+  useStreamingAssets: 1
+  defaultPartyMaterial: {fileID: 2100000, guid: a83a76b80b499a045ae7d845fcff04d6, type: 2}
+  partyMaterialMaps:
+  - partyName: SNP
+    material: {fileID: 2100000, guid: 3baefece5458dd748b9a6769da395471, type: 2}
+  - partyName: Lab
+    material: {fileID: 2100000, guid: d55a25440431d37479239c5160969de6, type: 2}
+  - partyName: Green
+    material: {fileID: 2100000, guid: f2ea8a356e408344ab5550c81372d856, type: 2}
+  - partyName: Con
+    material: {fileID: 2100000, guid: 096aebc1d5a091c4faadbdc5a44fc162, type: 2}
+  - partyName: RUK
+    material: {fileID: 2100000, guid: 38a3e389b538c5e4581943bcbb1ea530, type: 2}
+  - partyName: LD
+    material: {fileID: 2100000, guid: cf566ba3c97a6be49a58cd0a817f0230, type: 2}
+  loadOnStart: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -481,4 +568,5 @@ SceneRoots:
   - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
-  - {fileID: 1815597902}
+  - {fileID: 1265572569}
+  - {fileID: 836947877}
